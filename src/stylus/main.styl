@@ -1,0 +1,63 @@
+@import 'modules/base/colors'
+
+body, h1, h2, h3, h4, h5, h6
+	margin 0
+	padding 0
+
+body
+	font-family 'IntroRegular'
+	line-height 1.15
+	color $grey
+
+h1
+	font-size 64px
+
+h2
+	font-size 48px
+	
+header
+	padding 115px 0
+	width 100%
+	height 100vh
+
+.green
+	color $green
+
+.pink
+	color $pink
+
+.yellow
+	color $yellow
+
+.blue 
+	color $blue
+
+.header-subheader
+	font-size 25px
+	position relative
+	top -7px
+
+	&--big
+		font-size 33px
+
+.arrow-down
+	color $navy-blue
+	height 70px
+	padding-left 90px
+	background url('../img/arrow-down-bg.png') no-repeat
+	background-position left center
+	background-size 70px
+	position relative
+	
+	&:before
+		content ''
+		background url(../img/arrow-down.png) no-repeat
+		width 37px
+		height 23px
+		display block
+		position absolute
+		left 15px
+		top 0
+		bottom 0
+		margin auto
+		

@@ -1,0 +1,20 @@
+/* font-family: "IntroRegular"; */
+@font-face {
+    font-family: "IntroRegular";
+    src: url("IntroRegular/IntroRegular.eot");
+    src: url("IntroRegular/IntroRegular.eot?#iefix")format("embedded-opentype"),
+    url("IntroRegular/IntroRegular.woff") format("woff"),
+    url("IntroRegular/IntroRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "IntroInline"; */
+@font-face {
+    font-family: "IntroInline";
+    src: url("IntroInline/IntroInline.eot");
+    src: url("IntroInline/IntroInline.eot?#iefix")format("embedded-opentype"),
+    url("IntroInline/IntroInline.woff") format("woff"),
+    url("IntroInline/IntroInline.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
