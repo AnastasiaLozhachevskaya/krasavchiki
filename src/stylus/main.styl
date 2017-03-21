@@ -1,13 +1,17 @@
 @import 'modules/base/colors'
 
-body, h1, h2, h3, h4, h5, h6
+body, header, section, h1, h2, h3, h4, h5, h6
 	margin 0
 	padding 0
 
 body
-	font-family 'IntroRegular'
+	font-family 'SegoeUIRegular', sans-serif
 	line-height 1.15
+	font-size 20px
 	color $grey
+	
+h1, h2, h3, h4, h5, h6
+	font-family 'IntroRegular', sans-serif
 
 h1
 	font-size 64px
@@ -15,10 +19,23 @@ h1
 h2
 	font-size 48px
 	
-header
-	padding 115px 0
-	width 100%
-	height 100vh
+h3
+	font-size 30px
+	
+h4
+	font-size 23px
+	
+p
+	font-size 20px
+
+section
+	padding 50px 0
+	
+.segoe-font
+	font-family 'SegoeUIRegular', sans-serif
+	
+.intro-font
+	font-family 'IntroRegular', sans-serif
 
 .green
 	color $green
@@ -32,13 +49,21 @@ header
 .blue 
 	color $blue
 
-.header-subheader
-	font-size 25px
-	position relative
-	top -7px
+.heading
+	margin-bottom 50px
 
-	&--big
-		font-size 33px
+.hero
+	padding 115px 0
+	width 100%
+	height 100vh
+	
+	&__subheader
+		font-size 25px
+		position relative
+		top -7px
+
+		&--big
+			font-size 33px
 
 .arrow-down
 	color $navy-blue
@@ -51,7 +76,7 @@ header
 	
 	&:before
 		content ''
-		background url(../img/arrow-down.png) no-repeat
+		background url('../img/arrow-down.png') no-repeat
 		width 37px
 		height 23px
 		display block
@@ -61,3 +86,8 @@ header
 		bottom 0
 		margin auto
 		
+.video-container
+	&__ipad
+		display block
+		margin 0 auto
+		width 85%
