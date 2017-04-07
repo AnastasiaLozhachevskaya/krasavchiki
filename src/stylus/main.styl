@@ -485,3 +485,72 @@ table
 	
 	@media all and (max-width: 640px)
 		font-size 16px
+		
+.hamburger
+	display none
+	
+.navigation-container
+	width 100%
+	position fixed
+	top 0
+	left 0
+	background-color #fff
+	box-shadow 0px 3px 4px 0px #e1e2e2
+	height 80px
+	z-index 100
+	
+.logo
+	position absolute
+	left 15px
+	top 15px
+	
+.relative
+	position relative
+	padding-top 32px
+	
+.navigation
+	float right
+	
+	&__link
+		float left
+		display block
+		padding 0 20px 33px 9px
+		color #898384
+		text-transform: uppercase
+		font-size 13px
+		border-left 3px solid transparent
+		font-weight 600
+		transition .2s ease-out
+		
+		
+		&:hover
+			color #35808b
+			transition .2s ease-out
+			text-decoration none
+			
+		&:visited
+			color #898384
+			
+		&:focus
+			color #35808b
+			
+		&.active
+			border-left 3px solid #67b8c4
+			
+.navigation-btn
+	color $yellow
+	border 3px solid $yellow
+	border-radius 25px
+	height 40px
+	position relative
+	top -12px
+	padding 9px 25px
+	transition .2s ease-out
+	
+	&:hover
+		background-color $yellow
+		color #fff
+		transition .2s ease-out
+		
+	&.active
+		border-left 3px solid $yellow
