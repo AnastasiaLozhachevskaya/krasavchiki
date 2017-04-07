@@ -1,8 +1,19 @@
 @import 'modules/base/colors'
+@import 'modules/circles'
 
 body, header, section, h1, h2, h3, h4, h5, h6
 	margin 0
 	padding 0
+	
+a
+	&:visited
+		outline 0
+		color #fff
+		text-decoration none
+	&:focus
+		outline 0
+		color #fff
+		text-decoration none
 
 body
 	font-family 'SegoeUIRegular', sans-serif
@@ -10,26 +21,44 @@ body
 	font-size 20px
 	color $grey
 	
+	@media all and (max-width: 640px)
+		font-size 18px
+	
 h1, h2, h3, h4, h5, h6
 	font-family 'IntroRegular', sans-serif
 
 h1
 	font-size 70px
+	
+	@media all and (max-width: 640px)
+		font-size 50px
 
 h2
 	font-size 55px
 	
+	@media all and (max-width: 640px)
+		font-size 42px
+	
 h3
 	font-size 38px
 	
+	@media all and (max-width: 640px)
+		font-size 30px
+	
 h4
 	font-size 27px
+	
+	@media all and (max-width: 640px)
+		font-size 20px
 	
 p
 	font-size 20px
 
 section
 	padding 50px 0
+	
+	@media all and (max-width: 640px)
+		padding 30px 0
 	
 .segoe-font
 	font-family 'SegoeUIRegular', sans-serif
@@ -63,15 +92,57 @@ section
 	width 100%
 	min-height 100vh
 	position relative
+	overflow hidden
+	
+	@media all and (max-width: 640px)
+		padding-bottom 20px
 	
 	&__subheader
 		font-size 30px
 		position relative
 		top -7px
 		margin-bottom 50px
+		
+		@media all and (max-width: 640px)
+			font-size 25px
+			margin-bottom 20px
 
 		&--big
 			font-size 33px
+			
+			@media all and (max-width: 640px)
+				font-size 26px
+			
+	&__bg-images
+		position absolute
+		width 657px
+		left 45%
+		height 657px
+		
+		@media all and (max-width: 960px)
+			left 52%
+			
+		@media all and (max-width: 640px)
+			display none
+		
+	&__bg-img
+		position absolute
+		
+		&--fir
+			top 0
+			left 0
+			width 657px
+			height 657px
+		
+			
+		&--sec
+			left 58%
+			width 500px
+			height 500px
+			bottom -29%
+			
+			@media all and (max-width: 960px)
+				display none
 
 .arrow-down
 	color $navy-blue
@@ -231,6 +302,9 @@ section
 		width 100%
 		padding 21px 25px 30px 30px
 		
+		@media all and (max-width: 640px)
+			height 60px
+		
 		@media all and (max-width: 460px)
 			width 100%
 			
@@ -248,6 +322,10 @@ section
 			background -ms-linear-gradient($yellow, #ff8c00)
 			background -webkit-linear-gradient($yellow, #ff8c00)
 			background -moz-linear-gradient($yellow, #ff8c00)
+			
+			@media all and (max-width: 640px)
+				font-size 22px
+				padding 17px 25px 27px 30px
 			
 			&:hover
 				background linear-gradient(#ff8c00, $yellow)
@@ -281,6 +359,9 @@ table
 .mentor
 	&__img
 		width 100%
+		
+		@media all and (max-width: 640px)
+			margin-bottom 30px
 		
 	&__descr
 		font-size 24px
@@ -398,3 +479,9 @@ table
 	top 0
 	left 0
 	background url('../img/pattern-blue.png') repeat
+	
+.ps
+	font-size 18px
+	
+	@media all and (max-width: 640px)
+		font-size 16px

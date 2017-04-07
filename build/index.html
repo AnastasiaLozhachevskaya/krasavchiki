@@ -6,15 +6,25 @@
 	<title>Krasavchiki</title>
 	<link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="css/hamburgers.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body class="parallax-container">
 
+	<div class="rellax parallax-circle parallax-circle--blue" data-rellax-speed="2"></div>
+	<div class="rellax parallax-circle parallax-circle--pink" data-rellax-speed="5"></div>
 	<!-- INTRO START -->
 	<header class="hero">
-		<div class="circle circle--blue"></div>
+		
+		<!-- <div class="circle circle--blue"></div> -->
+		<div class="hero__bg-images">
+			<img class="hero__bg-img hero__bg-img--fir" src="img/header-bg1.png">
+			<img class="hero__bg-img hero__bg-img--sec" src="img/header-bg2.png">
+		</div>
+		
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -148,7 +158,7 @@
 			<div class="row text-center">
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<header class="heading">
-						<h3 class="green">1258</h3>
+						<h3 class="green track"><span class="js-decimal" data-from="0" data-to="1258"></span></h3>
 						<h4>партнеров</h4>
 					</header>
 					<div class="numbers__bullet"></div>
@@ -158,7 +168,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<header class="heading">
-						<h3 class="green">134646</h3>
+						<h3 class="green"><span class="js-decimal" data-from="0" data-to="134646"></span></h3>
 						<h4>человека</h4>
 					</header>
 					<div class="numbers__bullet"></div>
@@ -168,7 +178,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<header class="heading">
-						<h3 class="green">5000</h3>
+						<h3 class="green"><span class="js-decimal" data-from="0" data-to="5000"></span></h3>
 						<h4>долларов</h4>
 					</header>
 					<div class="numbers__bullet"></div>
@@ -178,7 +188,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<header class="heading">
-						<h3 class="green">24/7</h3>
+						<h3 class="green"><span class="js-decimal" data-from="0" data-to="24"></span>/<span class="js-decimal" data-from="0" data-to="7"></span></h3>
 						<h4>online</h4>
 					</header>
 					<div class="numbers__bullet"></div>
@@ -267,7 +277,7 @@
 								<div class="feedback__text">
 									Sed et dui lacus. Aenean lacinia rhoncus mauris, quis feugiat dui gravida quis. Donec dolor lacus, pulvinar nec purus nec, molestie blandit augue. Duis et tortor porttitor, posuere metus ut, laoreet arcu. Donec id dignissim urna. Etiam vel ligula eu dolor sollicitudin fringilla. Ut vulputate urna elit, bibendum posuere lectus iaculis ac.
 								</div>
-								<a class="feedback__btn" href="#">Видео отзыв</a>
+								<a class="feedback__btn popup-youtube" href="https://www.youtube.com/watch?v=4IP_E7efGWE">Видео отзыв</a>
 							</div>
 							<div class="feedback">
 								<div class="image-container image-container--slider">
@@ -278,7 +288,7 @@
 								<div class="feedback__text">
 									Sed et dui lacus. Aenean lacinia rhoncus mauris, quis feugiat dui gravida quis. Donec dolor lacus, pulvinar nec purus nec, molestie blandit augue. Duis et tortor porttitor, posuere metus ut, laoreet arcu. Donec id dignissim urna. Etiam vel ligula eu dolor sollicitudin fringilla. Ut vulputate urna elit, bibendum posuere lectus iaculis ac.
 								</div>
-								<a class="feedback__btn" href="#">Видео отзыв</a>
+								<a class="feedback__btn popup-youtube" href="https://www.youtube.com/watch?v=4IP_E7efGWE">Видео отзыв</a>
 							</div>
 							<div class="feedback">
 								<div class="image-container image-container--slider">
@@ -289,7 +299,7 @@
 								<div class="feedback__text">
 									Sed et dui lacus. Aenean lacinia rhoncus mauris, quis feugiat dui gravida quis. Donec dolor lacus, pulvinar nec purus nec, molestie blandit augue. Duis et tortor porttitor, posuere metus ut, laoreet arcu. Donec id dignissim urna. Etiam vel ligula eu dolor sollicitudin fringilla. Ut vulputate urna elit, bibendum posuere lectus iaculis ac.
 								</div>
-								<a class="feedback__btn" href="#">Видео отзыв</a>
+								<a class="feedback__btn popup-youtube" href="https://www.youtube.com/watch?v=4IP_E7efGWE">Видео отзыв</a>
 							</div>
 						</div>
 					</div>
@@ -357,10 +367,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 xol-sm-12">
+				<div class="col-sm-4 xol-sm-12">
 					<img class="mentor__img" src="img/person.jpg" alt="">
 				</div>
-				<div class="col-md-8 xol-sm-12">
+				<div class="col-sm-8 xol-sm-12">
 					<h3 class="green">Фамилия Имя</h3>
 					<p class="mentor__descr">Партнер команды Красавчики</p>
 					<ul class="contacts-list">
@@ -382,7 +392,7 @@
 				</div>
 				<div class="col-sm-10 col-xs-12">
 					<div class="hr"></div>
-					<p style="font-size: 18px">Наша команда стремительно развивается на протяжении долгих лет. За это время мы добились высоких вершин, воплотили многие мечты в реальности, помогли многим людям стать состоятельными и счастливыми. Мы приглашаем вас построить собственный бизнес с нашей помощью! Не упустите свой шанс! Связывайтесь со мной в любое удобное для вас время. До связи!</p>
+					<p class="ps">Наша команда стремительно развивается на протяжении долгих лет. За это время мы добились высоких вершин, воплотили многие мечты в реальности, помогли многим людям стать состоятельными и счастливыми. Мы приглашаем вас построить собственный бизнес с нашей помощью! Не упустите свой шанс! Связывайтесь со мной в любое удобное для вас время. До связи!</p>
 				</div>
 			</div>
 		</div>
@@ -397,6 +407,12 @@
 
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/appear.min.js"></script>
+	<script type="text/javascript" src="js/countto.js"></script>
+	<script type="text/javascript" src="js/velocity.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/rellax.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('.feedbacks-slider').slick({
@@ -413,6 +429,13 @@
 			})
 		});
 	</script>
+
+	<script>
+      // Need DEBUG for old version of Rellax.js
+      var DEBUG = false;
+      var rellax = new Rellax('.rellax');
+    </script>
+
 	
 </body>
 </html>
