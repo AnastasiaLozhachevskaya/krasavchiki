@@ -1,9 +1,16 @@
 .parallax-container
 	overflow-x hidden
+	z-index -2
+	height 100%
+	
 
 .parallax-circle
 	border-radius 50%
 	position absolute
+	z-index -2
+	
+	@media all and (max-width: 768px)
+		display none
 	
 	
 	&--1
@@ -11,7 +18,7 @@
 		opacity .3
 		width 800px
 		height 800px
-		top -90%
+		top -30%
 		left -20%
 		
 		
@@ -20,14 +27,14 @@
 		opacity .3
 		width 500px
 		height 500px
-		top 75%
+		top 45%
 		left 1%
 		
 	&--3
 		width 250px
 		height 250px
-		top 67%
-		left 1%
+		top 47%
+		left -3%
 		background url('../img/patterns/pattern-ultra-blue.png') repeat
 		
 	&--4
@@ -36,6 +43,9 @@
 		height 800px
 		top 4%
 		right -6%
+		
+		@media all and (max-width: 1200px)
+			display none
 		
 	&--5
 		border 4px solid #eef7f9
@@ -47,7 +57,7 @@
 	&--6
 		width 350px
 		height 350px
-		top 300%
+		top 145%
 		left 10%
 		background url('../img/patterns/pattern-green.png') repeat
 		
@@ -55,14 +65,14 @@
 		background-color #67c47b
 		width 200px
 		height 200px
-		top 410%
+		top 200%
 		left -5%
 		
 	&--8
 		background url('../img/patterns/pattern-ultra-blue.png') repeat
 		width 600px
 		height 600px
-		top 380%
+		top 210%
 		right 5%
 		
 	&--9
@@ -70,35 +80,35 @@
 		opacity .3
 		width 400px
 		height 400px
-		top 570%
+		top 290%
 		left 5%
 		
 	&--10
 		border 4px solid #ffb500
 		width 100px
 		height 100px
-		top 650%
+		top 310%
 		left 5%
 		
 	&--11
 		background url('../img/patterns/pattern-pink.png') repeat
 		width 300px
 		height 300px
-		top 670%
+		top 340%
 		left 1%
 		
 	&--12
 		background url('../img/patterns/pattern-orange.png') repeat
 		width 240px
 		height 240px
-		top 565%
+		top 300%
 		right 9%
 		
 	&--13
 		background-color #7ed3e0
 		width 200px
 		height 200px
-		top 640%
+		top 350%
 		right -1%
 		
 	&--14
@@ -106,7 +116,7 @@
 		opacity .3
 		width 800px
 		height 800px
-		top 395%
+		top 225%
 		right -31%
 		
 	&--15
@@ -114,14 +124,14 @@
 		opacity .3
 		width 800px
 		height 800px
-		top 660%
+		top 380%
 		left -31%
 		
 	&--16
 		background url('../img/patterns/pattern-ultra-blue.png') repeat
 		width 250px
 		height 250px
-		top 900%
+		top 490%
 		left 11%
 		
 	&--17
@@ -129,13 +139,13 @@
 		opacity .3
 		width 100px
 		height 100px
-		top 900%
+		top 430%
 		right 11%
 		
 	&--18
 		width 250px
 		height 250px
-		top 1020%
+		top 520%
 		right 1%
 		background url('../img/patterns/pattern-green.png') repeat
 		
@@ -144,13 +154,13 @@
 		opacity .3
 		width 500px
 		height 500px
-		top 970%
+		top 520%
 		right -10%
 
 	&--20
 		width 500px
 		height 500px
-		top 1110%
+		top 610%
 		left -14%
 		background url('../img/patterns/pattern-green.png') repeat
 		
@@ -158,34 +168,36 @@
 		border 3px solid #e1e1e1
 		width 500px
 		height 500px
-		top 1230%
+		top 680%
 		left 1%
 		
 	&--22
 		border 3px solid #ffb500
 		width 100px
 		height 100px
-		top 1620%
+		top 740%
 		left 5%
+		
+		
 		
 	&--23
 		background url('../img/patterns/pattern-orange.png') repeat
 		width 200px
 		height 200px
-		top 1620%
-		right 9%
+		top 610%
+		right 14%
 		
 	&--24
 		border 5px solid #e1e1e1
 		opacity .3
 		width 800px
 		height 800px
-		top 1370%
+		top 600%
 		right -31%
 		
 	&--25
 		background url('../img/patterns/pattern-pink.png') repeat
 		width 300px
 		height 300px
-		top 1670%
+		top 720%
 		left 1%

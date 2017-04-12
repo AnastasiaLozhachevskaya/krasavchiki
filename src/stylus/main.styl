@@ -20,6 +20,8 @@ body
 	line-height 1.15
 	font-size 20px
 	color $grey
+	min-width 320px
+	overflow-x hidden
 	
 	@media all and (max-width: 640px)
 		font-size 18px
@@ -56,12 +58,18 @@ p
 
 section
 	padding 50px 0
+	overflow-y visible
 	
 	@media all and (max-width: 640px)
 		padding 30px 0
 	
 .segoe-font
 	font-family 'SegoeUIRegular', sans-serif
+	
+.segoe-black-font
+	font-family 'SegoeUIBlack', sans-serif
+	
+
 	
 .intro-font
 	font-family 'IntroRegular', sans-serif
@@ -92,7 +100,6 @@ section
 	width 100%
 	min-height 100vh
 	position relative
-	overflow hidden
 	
 	@media all and (max-width: 640px)
 		padding-bottom 20px
@@ -143,6 +150,33 @@ section
 			
 			@media all and (max-width: 960px)
 				display none
+				
+.hren
+	position relative
+	width 100%
+	margin 20px 0
+	
+	&:after
+		height 2px
+		position absolute
+		top 0
+		bottom 0
+		margin auto
+		width 100%
+		content ''
+		display block
+		background-color $green
+		z-index -1
+	
+	&__text
+		background-color $green
+		color #fff
+		font-size 14px
+		padding 3px 5px
+		width 260px
+		text-align center
+	
+	
 
 .arrow-down
 	color $navy-blue
@@ -153,8 +187,18 @@ section
 	height 70px
 	margin-top 100px
 	
+	&__text
+		color $navy-blue
+		
+		&:hover,
+		&:focus
+			color $navy-blue
+			text-decoration none
+		&:visited
+			color $navy-blue
+	
 	&__icon
-		background url('../img/patterns/pattern-navy.png') repeat
+		background url('../img/arrow-bg.png') no-repeat
 		position relative
 		width 70px
 		height 70px
@@ -174,6 +218,86 @@ section
 			top 0
 			bottom 0
 			margin auto
+			
+.arrow-down__icon:before{
+	animation: arrow ease-out 2s;
+	animation-iteration-count: infinite;
+	transform-origin: 50% 50%;
+	animation-fill-mode:forwards; /*when the spec is finished*/
+	-webkit-animation: arrow ease-out 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+	-moz-animation: arrow ease-out 2s;
+	-moz-animation-iteration-count: infinite;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation-fill-mode:forwards; /*FF 5+*/
+	-o-animation: arrow ease-out 2s;
+	-o-animation-iteration-count: infinite;
+	-o-transform-origin: 50% 50%;
+	-o-animation-fill-mode:forwards; /*Not implemented yet*/
+	-ms-animation: arrow ease-out 2s;
+	-ms-animation-iteration-count: infinite;
+	-ms-transform-origin: 50% 50%;
+	-ms-animation-fill-mode:forwards; /*IE 10+*/
+}
+
+@keyframes arrow{
+	0% {
+		opacity:0;
+		transform: translate(0px,-15px)
+	}
+	100% {
+		opacity:1;
+		transform: translate(0px,0px)
+	}
+}
+
+@-moz-keyframes arrow{
+  0% {
+    opacity:0;
+    -moz-transform:  translate(0px,-15px)
+  }
+  100% {
+    opacity:1;
+    -moz-transform:  translate(0px,0px)
+  }
+}
+
+@-webkit-keyframes arrow {
+	0% {
+		opacity:0;
+		-webkit-transform:  translate(0px,-15px)
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:  translate(0px,0px)
+	}
+}
+
+@-o-keyframes arrow {
+	0% {
+		opacity:0;
+		-o-transform: translate(0px,-15px)
+	}
+	100% {
+		opacity:1;
+		-o-transform: translate(0px,0px)
+	}
+}
+
+@-ms-keyframes arrow {
+	0% {
+		opacity:0;
+		-ms-transform: translate(0px,-15px)
+	}
+	100% {
+		opacity:1;
+		-ms-transform: translate(0px,0px)
+	}
+}
+			
+
 		
 .video-container
 	position relative
@@ -290,8 +414,11 @@ section
 	padding 20px
 	font-size 14px
 	
-.form
-	&__input
+form
+	label
+		display none
+		
+	input
 		display block
 		margin-bottom 20px
 		border 5px solid #f4f4f4
@@ -308,48 +435,59 @@ section
 		@media all and (max-width: 460px)
 			width 100%
 			
-		&--btn
-			color #fff
-			background-color $yellow
-			border none
-			text-align center
-			font-style normal
-			font-family 'IntroRegular', sans-serif
-			font-size 30px
-			padding 21px 25px 27px 30px
-			cursor pointer
-			background linear-gradient($yellow, #ff8c00)
-			background -ms-linear-gradient($yellow, #ff8c00)
-			background -webkit-linear-gradient($yellow, #ff8c00)
-			background -moz-linear-gradient($yellow, #ff8c00)
-			
-			@media all and (max-width: 640px)
-				font-size 22px
-				padding 17px 25px 27px 30px
-			
-			&:hover
-				background linear-gradient(#ff8c00, $yellow)
-				background -ms-linear-gradient(#ff8c00, $yellow)
-				background -webkit-linear-gradient(#ff8c00, $yellow)
-				background -moz-linear-gradient(#ff8c00, $yellow)
+	button
+		color #fff
+		background-color $yellow
+		border none
+		text-align center
+		font-style normal
+		border-radius 50px
+		height 80px
+		width 100%
+		font-family 'IntroRegular', sans-serif
+		font-size 30px
+		padding 21px 25px 27px 30px
+		cursor pointer
+		background linear-gradient($yellow, #ff8c00)
+		background -ms-linear-gradient($yellow, #ff8c00)
+		background -webkit-linear-gradient($yellow, #ff8c00)
+		background -moz-linear-gradient($yellow, #ff8c00)
+		
+		@media all and (max-width: 640px)
+			font-size 22px
+			padding 17px 25px 27px 30px
+		
+		&:hover
+			background linear-gradient(#ff8c00, $yellow)
+			background -ms-linear-gradient(#ff8c00, $yellow)
+			background -webkit-linear-gradient(#ff8c00, $yellow)
+			background -moz-linear-gradient(#ff8c00, $yellow)
 			
 .guarantee
 	font-size 16px
 	text-align center
 	margin-top 10px
-			
-table
-	width 100%
 	
-	td
+
+			
+.tmplt-usersList
+	width 100%
+	margin 0
+	background-color transparent
+	border-radius 0
+	box-shadow none
+	padding 0
+	list-style-type none
+		
+	li
 		padding-bottom 10px
 		
-	tr
-		td:first-child
+		span:first-child
 			color $pink
 			
-		td:last-child
+		span:last-child
 			text-align right
+			float right
 			
 
 .report-slide
@@ -368,6 +506,7 @@ table
 		
 .contacts-list
 	padding 0
+	margin 20px 0
 	list-style-type none
 	
 	&__item
@@ -411,6 +550,11 @@ table
 
 .feedbacks
 	padding-bottom 100px
+	background url('../img/quotes.png') no-repeat
+	background-position center right
+	
+	@media all and (max-width: 769px)
+		background none
 	
 .feedback
 	&__heading
@@ -486,8 +630,7 @@ table
 	@media all and (max-width: 640px)
 		font-size 16px
 		
-.hamburger
-	display none
+
 	
 .navigation-container
 	width 100%
@@ -510,6 +653,9 @@ table
 	
 .navigation
 	float right
+	
+	@media all and (max-width: 1100px)
+		display none
 	
 	&__link
 		float left
@@ -537,6 +683,28 @@ table
 		&.active
 			border-left 3px solid #67b8c4
 			
+	&.active
+		display block
+		position absolute
+		width 100%
+		top 80px
+		left 0
+		background-color #fff
+		padding 0 10px 20px
+		
+		.navigation__link
+			float none
+			max-width 160px
+			margin 0 auto
+			text-align center
+			padding 15px 20px
+			
+		.navigation-btn
+			top 0
+			padding 8px 0
+		
+
+			
 .navigation-btn
 	color $yellow
 	border 3px solid $yellow
@@ -554,3 +722,58 @@ table
 		
 	&.active
 		border-left 3px solid $yellow
+		
+.hamburger
+	display none
+	padding 0
+	float right
+	
+	@media all and (max-width: 1100px)
+		display block
+	
+
+.video, .registered, .numbers, .receive, .feedbacks
+	position relative
+	
+.numbers
+	top -1px
+
+.grey-overlay
+	background-color #f4f4f4
+	position absolute
+	bottom -1px
+	transform skewX(-45deg)
+	z-index -1
+	display none
+	
+	// @media all and (max-width: 768px)
+	// 	display none
+	
+	&--video
+		width 1000px
+		height 80%
+		right -30.6%
+		
+	&--registered
+		width 1000px
+		height 100%
+		right -30%
+		
+	&--numbers
+		width 1000px
+		height 100%
+		right -10%
+		
+	&--receive
+		width 1000px
+		height 101%
+		right 14.5%
+		
+	&--feedbacks
+		width 1000px
+		height 100%
+		right 74%
+		
+
+.tmplt-containerHd, .tmplt-wrapFooter
+	display none

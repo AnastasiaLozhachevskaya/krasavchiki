@@ -69,3 +69,13 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "SegoeUIBlack";
+    src: url("SegoeUIBlack/SegoeUIBlack.eot");
+    src: url("SegoeUIBlack/SegoeUIBlack.eot?#iefix")format("embedded-opentype"),
+    url("SegoeUIBlack/SegoeUIBlack.woff") format("woff"),
+    url("SegoeUIBlack/SegoeUIBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
